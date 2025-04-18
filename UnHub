@@ -1,0 +1,320 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/NICKISBAD/Nick-s-Modded-KAVO-Lib/main/Nick'sModdedKavoLib.lua"))()
+local Window = Library.CreateLib("Un Hub | Make By LE_GO89", "DarkTheme")
+local player = game.Players.LocalPlayer
+
+local Tab = Window:NewTab("Main")
+local Section = Tab:NewSection("Username : " ..player.Name)
+Section:NewLabel("Display Name : " ..player.DisplayName)
+Section:NewLabel("Account Age : " ..player.AccountAge .." Days")
+Section:NewLabel("UserID : " ..player.UserId)
+Section:NewLabel("GameID : " ..game.PlaceId)
+Section:NewLabel("ServerID : " ..game.JobId)
+
+local Tab = Window:NewTab("Movement")
+local Section = Tab:NewSection("Walk")
+
+Section:NewButton("Reset Walk", "ButtonInfo", function()
+    player.Character.Humanoid.WalkSpeed = 16
+end)
+
+Section:NewSlider("Walk Speed", "SliderInfo", 1000, 16, function(s)
+    player.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewTextBox("Walk Speed", "TextboxInfo", function(txt)
+    local s = tonumber(txt)
+	player.Character.Humanoid.WalkSpeed = s
+end)
+
+Section:NewLabel("Jump")
+
+Section:NewButton("Reset Jump", "ButtonInfo", function()
+    player.Character.Humanoid.JumpPower = 50
+end)
+
+Section:NewSlider("Jump Power", "SliderInfo", 1000, 50, function(s)
+    player.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewTextBox("Jump Power", "TextboxInfo", function(txt)
+    local s = tonumber(txt)
+	player.Character.Humanoid.JumpPower = s
+end)
+
+Section:NewLabel("Gravity")
+
+Section:NewButton("Reset Gravity", "ButtonInfo", function()
+    game.Workspace.Gravity = 196.2
+end)
+
+Section:NewSlider("Gravity Down", "SliderInfo", 1000, 196.2, function(s)
+    game.Workspace.Gravity = s
+end)
+
+Section:NewSlider("Gravity Up", "SliderInfo", -1000, 196.2, function(s)
+    game.Workspace.Gravity = s
+end)
+
+Section:NewTextBox("Gravity", "TextboxInfo", function(txt)
+    local s = tonumber(txt)
+	game.Workspace.Gravity = s
+end)
+
+
+local Tab = Window:NewTab("Tool")
+local Section = Tab:NewSection("Tool")
+
+Section:NewButton("TP Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/R9fcTqCb"))()
+end)
+
+Section:NewButton("Block Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/G7GxjjEU"))()
+end)
+
+Section:NewButton("Print Pos Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/0gsvwvQK"))()
+end)
+
+Section:NewButton("Super Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/aBcvhQEb"))()
+end)
+
+Section:NewButton("Fly Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/eB4Crp4E"))()
+end)
+
+Section:NewButton("NoClip Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/QzP1mSva"))()
+end)
+
+Section:NewButton("Swim Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/262LDFAY"))()
+end)
+
+Section:NewButton("FreeCam Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/bqMTahuy"))()
+end)
+
+Section:NewButton("Spin Tool", "ButtonInfo", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/AS9nQJiY"))()
+end)
+
+local Tab = Window:NewTab("ESP")
+local Section = Tab:NewSection("ESP")
+
+Section:NewToggle("Esp Name", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/tByVj9yS"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/vkXz2ej7"))()
+    end
+end)
+
+Section:NewToggle("Esp UserID", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/xSWhyND9"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/uEiTpinF"))()
+    end
+end)
+
+Section:NewToggle("Esp Health", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/P2UYkhs1"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/RnxWdwPi"))()
+    end
+end)
+
+Section:NewToggle("Esp Account Age", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/6VGh3STE"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/LXBrUMdw"))()
+    end
+end)
+
+Section:NewToggle("Esp Display Name", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/CzbT5gQE"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/7fEU4XhM"))()
+    end
+end)
+
+Section:NewToggle("Esp Box", "ToggleInfo", function(state)
+    if state then
+    	local EspBox = loadstring(game:HttpGet("https://pastebin.com/raw/agFnyvEr"))()
+    	EspBox:on()
+    else 
+        EspBox:off()
+end
+end)
+
+Section:NewToggle("Esp Highlights", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/qkrmZ5tr"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/qb4mG7w5"))()
+    end
+end)
+
+
+Section:NewToggle("Esp Position", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/1PgQeJRx"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/SzfAJLgp"))()
+    end
+end)
+
+
+Section:NewToggle("Esp Distance", "ToggleInfo", function(state)
+    if state then
+        loadstring(game:HttpGet("https://pastebin.com/raw/2Rvic5rv"))()
+    else
+        loadstring(game:HttpGet("https://pastebin.com/raw/v5q0Jqeg"))()
+    end
+end)
+
+local Tab = Window:NewTab("Other")
+local Section = Tab:NewSection("Other")
+
+Section:NewTextBox("Tp To Players", "TextboxInfo", function(txt)
+    for _, player in pairs(game.Players:GetPlayers()) do
+    if player ~= game.Players.LocalPlayer then
+        local found = string.find(player.Name:lower(), txt) or string.find(player.DisplayName:lower(), txt)
+        if found then
+            local localHRP = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+            local targetHRP = player.Character and player.Character:FindFirstChild("HumanoidRootPart")
+            if localHRP and targetHRP then
+                localHRP.CFrame = targetHRP.CFrame
+            end
+        end
+    end
+end
+end)
+
+Section:NewTextBox("Tp To Pos", "TextboxInfo", function(txt)
+local coords = string.split(txt, " ")
+    local x = tonumber(coords[1])
+    local y = tonumber(coords[2])
+    local z = tonumber(coords[3])
+    player.Character.HumanoidRootPart.CFrame = CFrame.new(x, y, z)
+end)
+
+Section:NewTextBox("Tp To Game", "TextboxInfo", function(txt)
+game:GetService("TeleportService"):Teleport(txt)
+end)
+
+Section:NewTextBox("Tp To Server", "TextboxInfo", function(txt)
+game:GetService("ReplicatedStorage").__ServerBrowser:InvokeServer("teleport", txt)
+end)
+
+Section:NewTextBox("Spectator To Player", "TextboxInfo", function(txt)
+for _, player in pairs(game.Players:GetPlayers()) do
+    if player ~= game.Players.LocalPlayer then
+        local found = string.find(player.Name:lower(), txt) or string.find(player.DisplayName:lower(), txt)
+        if found then
+            local cam = workspace.CurrentCamera
+            if player.Character and player.Character:FindFirstChild("Humanoid") then
+                cam.CameraSubject = player.Character.Humanoid
+                break
+            end
+        end
+    end
+end
+end)
+
+Section:NewTextBox("Change Username", "TextboxInfo", function(txt)
+player.Name = txt
+end)
+
+Section:NewTextBox("Change Display Name", "TextboxInfo", function(txt)
+player.DisplayName = txt
+end)
+
+Section:NewTextBox("Chat", "TextboxInfo", function(txt)
+if game:GetService('TextChatService').ChatVersion == Enum.ChatVersion.LegacyChatService then
+game:GetService('ReplicatedStorage'):WaitForChild('DefaultChatSystemChatEvents'):WaitForChild('SayMessageRequest'):FireServer(txt, 'All')
+else
+game:GetService("TextChatService").TextChannels.RBXGeneral:SendAsync(txt)
+end
+end)
+
+Section:NewButton("Reset", "ButtonInfo", function()
+    game.Players.LocalPlayer.Character.Humanoid.Health = 0
+end)
+
+Section:NewButton("Reset Spectator", "ButtonInfo", function()
+    local cam = game.Workspace.CurrentCamera
+    cam.CameraSubject = game.Players.LocalPlayer.Character.Humanoid
+end)
+
+Section:NewButton("Rejoin", "ButtonInfo", function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId)
+end)
+
+Section:NewButton("Infinite Jump", "ButtonInfo", function()
+    local InfiniteJumpEnabled = false
+        game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+        game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+end
+end)
+end)
+
+Section:NewToggle("Sit", "ToggleInfo", function(state)
+    if state then
+player.Character.Humanoid.Sit = true
+    else
+player.Character.Humanoid.Sit = false
+end
+end)
+
+local Tab = Window:NewTab("Script")
+local Section = Tab:NewSection("Script")
+
+Section:NewButton("Position", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/8A5Y6EGp"))()
+end)
+
+Section:NewButton("Calculator", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/6X4FhAgV"))()
+end)
+
+Section:NewButton("UnHub: Fe", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/LEGO89896/UnHub-Animation/refs/heads/main/Fe"))()
+end)
+
+Section:NewButton("Fly", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/FqEYiYkN"))()
+end)
+
+Section:NewButton("FreeCam", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/siSuEhpE"))()
+end)
+
+Section:NewButton("Spin", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/Xep7v92f"))()
+end)
+
+Section:NewButton("NoClip", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/ck5WYjY5"))()
+end)
+
+Section:NewButton("Swim", "ButtonInfo", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/k8Eirqf0"))()
+end)
+
+local Tab = Window:NewTab("Copy Players Name")
+local Section = Tab:NewSection("Copy Players Name")
+
+Section:NewButton("Copy Players Name", "ButtonInfo", function()
+    for _, player in pairs(game.Players:GetPlayers()) do
+    Section:NewButton(player.Name, "ButtonInfo", function()
+    setclipboard(player.Name)
+    end)
+    end
+end)
